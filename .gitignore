@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Editors/OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Model checkpoints and large model artifacts
+model/*
+!model/README.md
+*.pth
+*.pt
+*.ckpt
+*.tar
+*.tar.gz
+*.tgz
+
+# Medical image data and prediction outputs
+test/input/
+test/output/
+test/validation_output/
+test/.staging_input/
+test/.staging_output/
+*.nii
+*.nii.gz
+*.mha
+*.mhd
+*.npz
+
+# Docker exports/logs
+*.log

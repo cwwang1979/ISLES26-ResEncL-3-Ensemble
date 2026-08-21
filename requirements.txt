@@ -1,0 +1,35 @@
+# ISLES26 API
+fastapi
+uvicorn
+
+# Exact LadleNet inference environment
+numpy==1.26.4
+scipy==1.13.1
+SimpleITK==2.5.2
+scikit-image==0.24.0
+nibabel==5.3.2
+
+# nnU-Net dependencies
+acvl_utils==0.2
+batchgenerators==0.25.1
+dynamic-network-architectures==0.4.2
+connected-components-3d==3.24.0
+dicom2nifti==2.6.0
+einops==0.8.1
+pandas==2.3.1
+requests==2.32.4
+tqdm==4.67.1
+yacs==0.1.8
+graphviz==0.21
+
+# Dependencies used by custom trainer variants
+torch-optimizer==0.3.0
+pytorch-ranger==0.1.1
+
+# Additional imports used by nnU-Net source
+matplotlib
+seaborn
+imageio
+tifffile
+scikit-learn
+psutil

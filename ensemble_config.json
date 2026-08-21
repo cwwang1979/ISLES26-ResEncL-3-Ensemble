@@ -1,0 +1,24 @@
+{
+  "solution_name": "ResEncL 3 Ensemble",
+  "team_name": "ChingweiWangLAB",
+  "ensemble_type": "weighted_probability_average",
+  "models": {
+    "M2": {
+      "folder": "nnUNetTrainer_ResEncL_M2FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres",
+      "weight": 0.2,
+      "checkpoint": "checkpoint_best.pth"
+    },
+    "M3": {
+      "folder": "nnUNetTrainer_ResEncL_M3FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres",
+      "weight": 0.3,
+      "checkpoint": "checkpoint_best.pth"
+    },
+    "M4": {
+      "folder": "nnUNetTrainer_ResEncL_M4FineTune400__nnUNetResEncUNetLPlans14G__3d_fullres",
+      "weight": 0.5,
+      "checkpoint": "checkpoint_best.pth"
+    }
+  },
+  "tta_mirroring": true,
+  "gaussian_importance_weighting": true
+}

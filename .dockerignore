@@ -1,0 +1,8 @@
+# The model is uploaded separately to Grand Challenge and mounted at runtime.
+model/
+test/
+*.tar
+*.tar.gz
+__pycache__/
+*.py[cod]
+.git/
