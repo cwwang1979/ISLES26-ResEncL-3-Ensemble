@@ -57,35 +57,85 @@ Docker package:
 The custom M2/M3/M4 trainer classes used by the checkpoints are included in
 `vendor/nnunetv2/training/nnUNetTrainer/`.
 
-## Model weights
+## Model Weights
 
-The three large model folders are not committed in normal Git history.
+The trained model weights for the final ISLES'26 Test Phase submission are available on Google Drive:
 
-See `model/README.md` for the exact required model folder names and expected
-layout. Download the released model assets and place/extract them under
-`./model/` before local inference.
+[Download the M2/M3/M4 model weights](https://drive.google.com/drive/folders/1KM4aa1aVAx68141fWXRYRGzf3Uez6xYv?usp=drive_link)
 
-`do_test_run.sh` mounts:
+The archive contains the three ResEnc-L models used in the final probability ensemble:
 
-```text
-./model  ->  /opt/ml/model
+| Model | Ensemble weight |
+|---|---:|
+| M2 | 0.20 |
+| M3 | 0.30 |
+| M4 | 0.50 |
+
+Download `ISLES26_ResEncL_3_Ensemble_model.tar.gz` from the Google Drive folder and place it in the repository root.
+
+Then extract it using:
+
+```bash
+tar -xzf ISLES26_ResEncL_3_Ensemble_model.tar.gz
 ```
 
-## Local testing
+After extraction, the repository should contain:
 
-1. Install Docker and NVIDIA Container Toolkit on a compatible Linux system.
-2. Download/extract the M2/M3/M4 model assets under `./model/`.
-3. Add a locally permitted ISLES'26-compatible test case under `./test/`.
-4. Build and test:
+```text
+model/
+├── nnUNetTrainer_ResEncL_M2FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres/
+├── nnUNetTrainer_ResEncL_M3FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres/
+└── nnUNetTrainer_ResEncL_M4FineTune400__nnUNetResEncUNetLPlans14G__3d_fullres/
+```
+
+## Running the Solution
+
+1. Clone this repository:
+
+```bash
+git clone https://github.com/cwwang1979/ISLES26-ResEncL-3-Ensemble.git
+cd ISLES26-ResEncL-3-Ensemble
+```
+
+2. Download `ISLES26_ResEncL_3_Ensemble_model.tar.gz` from the Google Drive link above.
+
+3. Place the downloaded archive in the repository root and extract it:
+
+```bash
+tar -xzf ISLES26_ResEncL_3_Ensemble_model.tar.gz
+```
+
+4. Make the provided shell scripts executable:
 
 ```bash
 chmod +x do_build.sh do_test_run.sh do_save.sh
+```
+
+5. Build the Docker image:
+
+```bash
 ./do_build.sh
+```
+
+6. Prepare an ISLES'26-compatible input case under the expected local test structure:
+
+```text
+test/input/interf0/
+```
+
+7. Run the Docker inference:
+
+```bash
 ./do_test_run.sh
 ```
 
-The public GitHub-ready package intentionally excludes the original local test
-MRI and generated validation outputs.
+The final prediction is generated using the weighted probability ensemble:
+
+- M2: 0.20
+- M3: 0.30
+- M4: 0.50
+
+The public GitHub repository intentionally excludes the original local test MRI and generated validation outputs.
 
 ## Important reproducibility note
 
