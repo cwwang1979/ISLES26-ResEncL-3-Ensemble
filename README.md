@@ -8,7 +8,7 @@ original layout to avoid changing the submitted runtime behavior.
 
 ## Final ensemble
 
-The solution combines three 3D nnU-Net ResEnc-L models at the probability level:
+The solution combines three 3D ResEnc-L models at the probability level:
 
 | Model | Fine-tuning | Ensemble weight |
 |---|---:|---:|
