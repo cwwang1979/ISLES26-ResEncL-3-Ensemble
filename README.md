@@ -73,21 +73,23 @@ The archive contains the three ResEnc-L models used in the final probability ens
 
 Download `ISLES26_ResEncL_3_Ensemble_model.tar.gz` from the Google Drive folder and place it in the repository root.
 
-Then extract it using:
+Create the model directory and extract the archive:
 
 ```bash
-tar -xzf ISLES26_ResEncL_3_Ensemble_model.tar.gz
+mkdir -p model
+tar -xzf ISLES26_ResEncL_3_Ensemble_model.tar.gz -C model
 ```
 
-After extraction, the repository should contain:
+After extraction, the directory structure should be:
 
 ```text
 model/
-├── nnUNetTrainer_ResEncL_M2FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres/
-├── nnUNetTrainer_ResEncL_M3FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres/
-└── nnUNetTrainer_ResEncL_M4FineTune400__nnUNetResEncUNetLPlans14G__3d_fullres/
+└── ISLES26/
+    └── Dataset007_ISLES26_T1/
+        ├── nnUNetTrainer_ResEncL_M2FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres/
+        ├── nnUNetTrainer_ResEncL_M3FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres/
+        └── nnUNetTrainer_ResEncL_M4FineTune400__nnUNetResEncUNetLPlans14G__3d_fullres/
 ```
-
 ## Running the Solution
 
 1. Clone this repository:
