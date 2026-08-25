@@ -119,11 +119,20 @@ chmod +x do_build.sh do_test_run.sh do_save.sh
 ./do_build.sh
 ```
 
-6. Prepare an ISLES'26-compatible input case under the expected local test structure:
+6. Prepare an ISLES'26-compatible input case using the following local directory structure:
 
 ```text
-test/input/interf0/
+test/
+└── input/
+    └── interf0/
+        ├── inputs.json
+        ├── stroke-metadata.json
+        └── images/
+            └── t1-brain-mri/
+                └── <case_name>.nii.gz
 ```
+
+The repository does not include challenge MRI data. Users must provide a permitted ISLES'26-compatible input case locally.
 
 7. Run the Docker inference:
 
