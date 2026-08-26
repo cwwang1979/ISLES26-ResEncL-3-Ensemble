@@ -153,3 +153,13 @@ The public GitHub repository intentionally excludes the original local test MRI 
 This repository describes the **final submitted M2/M3/M4 ResEncL 3 Ensemble**.
 Later experimental M5/M6/M7 models are not part of this final Test Phase
 solution.
+
+## License
+This source code is released under a creative commons license, which allows for personal and research use only. For a commercial license please contact Prof. Ching-Wei Wang. You can view a license summary here:  
+CC BY-NC 4.0  
+https://creativecommons.org/licenses/by-nc/4.0/
+
+
+## Contact
+Prof. Ching-Wei Wang  
+Email: cwwang1979@gmail.com  
