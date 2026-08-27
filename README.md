@@ -82,6 +82,19 @@ First, extract the password-protected 7z archive:
 7z x ISLES26_ResEncL_3_Ensemble_model.7z
 ```
 
+This will extract:
+
+```text
+ISLES26_ResEncL_3_Ensemble_model.tar.gz
+```
+
+Then create the `model/` directory and extract the model archive:
+
+```bash
+mkdir -p model
+tar -xzf ISLES26_ResEncL_3_Ensemble_model.tar.gz -C model
+```
+
 After extraction, the directory structure should be:
 
 ```text
@@ -89,8 +102,14 @@ model/
 └── ISLES26/
     └── Dataset007_ISLES26_T1/
         ├── nnUNetTrainer_ResEncL_M2FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres/
+        │   └── fold_1/
+        │       └── checkpoint_best.pth
         ├── nnUNetTrainer_ResEncL_M3FineTune150__nnUNetResEncUNetLPlans14G__3d_fullres/
+        │   └── fold_2/
+        │       └── checkpoint_best.pth
         └── nnUNetTrainer_ResEncL_M4FineTune400__nnUNetResEncUNetLPlans14G__3d_fullres/
+            └── fold_3/
+                └── checkpoint_best.pth
 ```
 ## Running the Solution
 
@@ -101,9 +120,9 @@ git clone https://github.com/cwwang1979/ISLES26-ResEncL-3-Ensemble.git
 cd ISLES26-ResEncL-3-Ensemble
 ```
 
-2. Download `ISLES26_ResEncL_3_Ensemble_model.tar.gz` from the Google Drive link above.
+2. Download `ISLES26_ResEncL_3_Ensemble_model.7z` from the Google Drive link above and place it in the repository root.
 
-3. Extract the encrypted archive:
+3. Extract the password-protected archive:
 
 ```bash
 7z x ISLES26_ResEncL_3_Ensemble_model.7z
@@ -111,7 +130,7 @@ cd ISLES26-ResEncL-3-Ensemble
 
 When prompted, enter the archive password shown above.
 
-4. Extract the contained model archive:
+4. Extract the contained model archive into the `model/` directory:
 
 ```bash
 mkdir -p model
