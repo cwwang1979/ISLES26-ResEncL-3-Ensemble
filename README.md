@@ -63,6 +63,8 @@ The trained model weights for the final ISLES'26 Test Phase submission are avail
 
 [Download the M2/M3/M4 model weights](https://drive.google.com/drive/folders/1KM4aa1aVAx68141fWXRYRGzf3Uez6xYv?usp=drive_link)
 
+**Archive password:** `Q7@vN2#kL9!xR4$T8mP6`
+
 The archive contains the three ResEnc-L models used in the final probability ensemble:
 
 | Model | Ensemble weight |
@@ -71,13 +73,13 @@ The archive contains the three ResEnc-L models used in the final probability ens
 | M3 | 0.30 |
 | M4 | 0.50 |
 
-Download `ISLES26_ResEncL_3_Ensemble_model.tar.gz` from the Google Drive folder and place it in the repository root.
 
-Create the model directory and extract the archive:
+Download `ISLES26_ResEncL_3_Ensemble_model.7z` from the Google Drive folder and place it in the repository root.
+
+First, extract the password-protected 7z archive:
 
 ```bash
-mkdir -p model
-tar -xzf ISLES26_ResEncL_3_Ensemble_model.tar.gz -C model
+7z x ISLES26_ResEncL_3_Ensemble_model.7z
 ```
 
 After extraction, the directory structure should be:
@@ -101,25 +103,34 @@ cd ISLES26-ResEncL-3-Ensemble
 
 2. Download `ISLES26_ResEncL_3_Ensemble_model.tar.gz` from the Google Drive link above.
 
-3. Place the downloaded archive in the repository root and extract it:
+3. Extract the encrypted archive:
 
 ```bash
-tar -xzf ISLES26_ResEncL_3_Ensemble_model.tar.gz
+7z x ISLES26_ResEncL_3_Ensemble_model.7z
 ```
 
-4. Make the provided shell scripts executable:
+When prompted, enter the archive password shown above.
+
+4. Extract the contained model archive:
+
+```bash
+mkdir -p model
+tar -xzf ISLES26_ResEncL_3_Ensemble_model.tar.gz -C model
+```
+
+5. Make the provided shell scripts executable:
 
 ```bash
 chmod +x do_build.sh do_test_run.sh do_save.sh
 ```
 
-5. Build the Docker image:
+6. Build the Docker image:
 
 ```bash
 ./do_build.sh
 ```
 
-6. Prepare an ISLES'26-compatible input case using the following local directory structure:
+7. Prepare an ISLES'26-compatible input case using the following local directory structure:
 
 ```text
 test/
@@ -134,7 +145,7 @@ test/
 
 The repository does not include challenge MRI data. Users must provide a permitted ISLES'26-compatible input case locally.
 
-7. Run the Docker inference:
+8. Run the Docker inference:
 
 ```bash
 ./do_test_run.sh
