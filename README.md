@@ -61,7 +61,7 @@ The custom M2/M3/M4 trainer classes used by the checkpoints are included in
 
 The trained model weights for the final ISLES'26 Test Phase submission are available on Google Drive:
 
-[Download the M2/M3/M4 model weights](https://drive.google.com/drive/folders/1KM4aa1aVAx68141fWXRYRGzf3Uez6xYv?usp=drive_link)
+[Download the M2/M3/M4 model weights](https://drive.google.com/file/d/1PWNyOlc9Cciz7HyEAam5seRb19Qda2EM/view?usp=drive_link)
 
 **Archive password:** `cwlabQ7@vN2#kL9!xR4$T8mP6`
 
