@@ -195,9 +195,14 @@ Later experimental M5/M6/M7 models are not part of this final Test Phase
 solution.
 
 ## License
-This source code is released under a creative commons license, which allows for personal and research use only. For a commercial license please contact Prof. Ching-Wei Wang. You can view a license summary here:  
-CC BY-NC 4.0  
-https://creativecommons.org/licenses/by-nc/4.0/
+
+This project is released under the **Apache License 2.0**. See the `LICENSE` file for details.
+
+## Citation
+
+If you use this repository, model weights, or any part of this work in academic research, please cite the associated publication.
+
+Citation information will be updated once the final publication details are available.
 
 
 ## Contact
