@@ -63,7 +63,7 @@ The trained model weights for the final ISLES'26 Test Phase submission are avail
 
 [Download the M2/M3/M4 model weights](https://drive.google.com/drive/folders/1KM4aa1aVAx68141fWXRYRGzf3Uez6xYv?usp=drive_link)
 
-**Archive password:** `Q7@vN2#kL9!xR4$T8mP6`
+**Archive password:** `cwlabQ7@vN2#kL9!xR4$T8mP6`
 
 The archive contains the three ResEnc-L models used in the final probability ensemble:
 
@@ -74,19 +74,22 @@ The archive contains the three ResEnc-L models used in the final probability ens
 | M4 | 0.50 |
 
 
-Download `ISLES26_ResEncL_3_Ensemble_model.7z` from the Google Drive folder and place it in the repository root.
+Download `ISLES26_ResEncL_3_Ensemble_Model_Package.7z` from the Google Drive folder and place it in the repository root.
 
-First, extract the password-protected 7z archive:
+Extract the password-protected package:
 
 ```bash
-7z x ISLES26_ResEncL_3_Ensemble_model.7z
+7z x ISLES26_ResEncL_3_Ensemble_Model_Package.7z
 ```
 
-This will extract:
+After entering the archive password, the package contains:
 
 ```text
+README_ISLES26_ResEncL_3_Ensemble.txt
 ISLES26_ResEncL_3_Ensemble_model.tar.gz
 ```
+
+The included README file provides the model extraction and usage instructions.
 
 Then create the `model/` directory and extract the model archive:
 
@@ -120,17 +123,24 @@ git clone https://github.com/cwwang1979/ISLES26-ResEncL-3-Ensemble.git
 cd ISLES26-ResEncL-3-Ensemble
 ```
 
-2. Download `ISLES26_ResEncL_3_Ensemble_model.7z` from the Google Drive link above and place it in the repository root.
+2. Download `ISLES26_ResEncL_3_Ensemble_Model_Package.7z` from the Google Drive link above and place it in the repository root.
 
-3. Extract the password-protected archive:
+3. Extract the password-protected package:
 
 ```bash
-7z x ISLES26_ResEncL_3_Ensemble_model.7z
+7z x ISLES26_ResEncL_3_Ensemble_Model_Package.7z
 ```
 
 When prompted, enter the archive password shown above.
 
-4. Extract the contained model archive into the `model/` directory:
+The extracted package contains:
+
+```text
+README_ISLES26_ResEncL_3_Ensemble.txt
+ISLES26_ResEncL_3_Ensemble_model.tar.gz
+```
+
+4. Create the `model/` directory and extract the model archive:
 
 ```bash
 mkdir -p model
